@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <title></title>
+</head>
+<body>
+
+var myProto = {
+  propertyExists: function(name) {
+    return name in this;    
+  }
+};
+var myNumbers = {
+  __proto__: myProto,
+  array: [1, 6, 7]
+};
+console.log(myNumbers.propertyExists('array'));      // => true
+console.log(myNumbers.propertyExists('collection')); // => false
+
+</body>
+</html>

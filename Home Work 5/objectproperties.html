@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>You can delete object properties.</p>
+
+<p id="demo"></p>
+
+<script>
+var emp = {
+    firstname:"J",
+    lastname:"D",
+    height:50,
+    
+};
+//adding new property
+emp.nationality = "English";
+document.getElementById("demo").innerHTML =
+emp.firstname + " is " + emp.nationality + ".";
+
+//deleting new property
+delete emp.height;
+document.getElementById("demo").innerHTML =
+emp.firstname + " is " + emp.height + " inches";
+</script>
+
+</body>
+</html>
