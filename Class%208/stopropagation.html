@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> </head>
+    <body>
+
+        <div style="height:100px;width:500px;padding:10px;border:1px solid blue;background-color:lightblue;">
+        This is a div1 element.
+            <p style="background-color:pink">This is para1 <br>
+            <span style="background-color:orange">This is a span1 element in the p and the div element.</span>
+            </p>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $("span").click(function(event){
+                event.stopPropagation();
+                alert("The span element was clicked.");
+            });
+            $("p").click(function(event){
+                alert("The p element was clicked.");
+            });
+            $("div").click(function(){
+                alert("The div element was clicked.");
+            });
+        });
+        </script>
+
+
+    </body>
+</html>
+

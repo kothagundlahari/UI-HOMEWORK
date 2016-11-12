@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div>1
+    <div>2
+        <div>3
+            <div>4
+                <div>5</div>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="log"></section>
+
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript">
+var divs = document.getElementsByTagName('div');
+
+function capture() {
+    log('capture: ' + this.firstChild.nodeValue.trim())
+}
+for (var i = 0; i < divs.length; i++) {
+    divs[i].addEventListener('click', capture, true);
+    
+}
+
+var $log = $('#log');
+
+function log(msg) {
+    $log.append('<p>' + msg + '</p>');
+}
+	
+</script>
+</body>
+</html>

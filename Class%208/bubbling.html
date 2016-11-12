@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<header><meta charset="utf-8"></header>
+
+<div class="top" onclick="bckgrnd(this)">topmost 
+    <div class="middle" onclick="bckgrnd(this)">2 second topmost
+        <div class="bottom" onclick="bckgrnd(this)">3 bottom
+        </div> 
+    </div>
+</div>
+
+<script>
+function bckgrnd(elem) {
+    elem.style.backgroundColor='orange'
+    alert(elem.className)
+   
+}
+</script>
+
+</body>
+</html>

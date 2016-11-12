@@ -24,11 +24,14 @@ Reference 5:
 
 Reference1:http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
 Event bubbling and capturing are two ways of event propagation in the HTML DOM API, when an event occurs in an element inside another element, and both elements have registered a handle for that event. 
-Reference2:
+Reference2:https://developer.gnome.org/gtkmm-tutorial/stable/sec-keyboardevents-propagation.html.en
+Event propagation means that, when an event is emitted on a particular widget, it can be passed to its parent widget (and that widget can pass it to its parent, and so on) and, if the parent has an event handler, that handler will be called. 
 
+Reference3:https://chrisrng.svbtle.com/event-propagation-and-event-delegation
+This flow occurs when an event takes place such as a click, hover, or mousedown. The function is then triggered on each part of each stage of each flow
 
-Reference3:
 Reference4:
+
 Reference5:
 My Ideas: 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -68,9 +71,18 @@ My Ideas: When we both the parent and the child events if we wish to stop the bu
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 5) event.stopImmediatePropagation?
-Reference1:
-Reference2:
-Reference3:
-Reference4:
-Reference5:
+Reference1:https://developer.mozilla.org/en-US/docs/Web/API/Event/stopImmediatePropagation
+Prevents other listeners of the same event from being called.
+
+Reference2:https://api.jquery.com/event.stopimmediatepropagation/
+Keeps the rest of the handlers from being executed and prevents the event from bubbling up the DOM tree.
+
+Reference3:http://www.w3schools.com/jquery/event_stopimmediatepropagation.asp
+The event.stopImmediatePropagation() method stops the rest of the event handlers from being executed.This method also stops the event from bubbling up the DOM tree.
+
+Reference4:http://stackoverflow.com/questions/5302903/jquery-event-stopimmediatepropagation-vs-return-false
+Whereas event.stopImmediatePropagation() is the same as event.stopPropagation() plus preventing other registered event handlers on the same element to be executed. So it does not prevent the default action for an event, such as following a clicked link.
+
+Reference5:https://codeplanet.io/preventdefault-vs-stoppropagation-vs-stopimmediatepropagation/
+stopImmediatePropagation: Prevents other listeners of the same event from being called.
 My Ideas: 

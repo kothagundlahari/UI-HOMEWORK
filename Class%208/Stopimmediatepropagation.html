@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<body>
+
+	<p>filling some jlgap api PAIG J-GIjpoik;l;kjslkabdfgnljk;'lask;lnjkbfnsk;lda;l.</p>
+
+
+
+	<button id="button">Try it</button>
+
+		<script>
+			function myFunction(event) {
+			    alert ("This is the first alert ");
+			     event.stopImmediatePropagation(); 
+			  
+			}
+
+			function someOtherFunction() {
+			    alert ("This is the second alert and that's it you will not get any other alert");
+			    event.stopImmediatePropagation(); 
+			}
+			
+		var x = document.getElementById("button");
+		x.addEventListener("click", myFunction);
+		x.addEventListener("click", someOtherFunction);
+		
+		</script>
+
+	</body>
+</html>
