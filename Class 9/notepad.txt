@@ -1,0 +1,159 @@
+Event Delegation:
+Reference 1: https://learn.jquery.com/events/event-delegation/
+Event delegation allows us to attach a single event listener, to a parent element, that will fire for all descendants matching a selector, whether those descendants exist now or are added in the future.
+
+Reference 2: https://www.sitepoint.com/javascript-event-delegation-is-easier-than-you-think/
+Event delegation makes use of two often overlooked features of JavaScript events: event bubbling and the target element. When an event is triggered on an element, for example a mouse click on a button, the same event is also triggered on all of that element’s ancestors. This process is known as event bubbling; the event bubbles up from the originating element to the top of the DOM tree. The target element of any event is the originating element, the button in our example, and is stored in a property of the event object. Using event delegation it’s possible to add an event handler to an element, wait for an event to bubble up from a child element and easily determine from which element the event originated.
+
+Reference 3:https://www.nczonline.net/blog/2009/06/30/event-delegation-in-javascript/
+Event delegation is, quite simply, using a single event handler to manage a particular type of event for the entire page. 
+
+Reference 4: https://code.tutsplus.com/tutorials/quick-tip-javascript-event-delegation-in-4-minutes--net-8961
+
+with event delegation, we simply add a single event listener to an ancestor element, maybe something like a "ul." Then, when the user clicks on one of its child elements, like an anchor tag, we only check to see if the target of the click was, in fact, an anchor tag. If it was, we pro
+
+
+Reference 5: http://davewasmer.com/javascript-event-delegation/
+Event listeners are simply functions that will be called when a particular event is fired on a particular node 
+
+
+My Ideas: IF the parent has so many childrens and you want to provide handlers for them by using one handler instead of each one 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is JQuery?
+Reference 1: http://www.w3schools.com/jquery/jquery_intro.asp
+The purpose of jQuery is to make it much easier to use JavaScript on your website.
+
+Reference 2: https://jquery.com/
+jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
+
+Reference 3:https://en.wikipedia.org/wiki/JQuery
+jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML
+
+
+Reference 4: https://www.tutorialspoint.com/jquery/jquery-overview.htm
+jQuery simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.
+
+Reference 5: http://www.jquery-tutorial.net/introduction/what-is-jquery/
+
+jQuery is a JavaScript framework, which purpose is to make it much easier to use JavaScript on your website
+
+My ideas:  JQuery is javascript library which was developed to reduce the java script code  which is used for dom manipulation , event handling, ajax support etc 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Why do we use Jquery?
+
+Reference 1:http://www.javaworld.com/article/2078613/java-web-development/6-reasons-you-should-be-using-jquery.html
+1. jQuery promotes simplicity
+2. jQuery elements display even when JavaScript is disabled
+3.jQuery easily integrates with the Visual Studio IDE
+4.jQuery makes animated applications just like Flash
+5.jQuery pages load faster
+
+
+Reference 2:http://www.learningjquery.com/2015/02/5-reasons-to-use-jquery
+1.Open Source
+2.Huge Library
+3.Cross-platform
+4.SEO friendly
+
+
+
+
+Reference 3:http://stackoverflow.com/questions/5111090/why-do-we-need-to-go-for-jquery
+
+1.you don't have to reimplement basic DOM and so on operations;
+2.all functions are guaranteed to work in all supported (by jQuery) browsers;
+3.it uses most new features of new browsers (if possible);
+4.your traffic is only reduced if you write huge environment using jQuery.
+
+
+
+Reference 4:http://stackoverflow.com/questions/7266067/jquery-over-javascript-why-and-when-to-use
+1.Complex element selection
+2.Animation
+3.Event handling
+
+
+Reference 5:http://www.htmlgoodies.com/tutorials/forms/article.php/3895776
+jQuery also supports the idea of plugins. Plugins allow people to create mini-libraries that complement jQuery
+
+
+My ideas:
+we use JQuery as it reduces the code length, improves cross browser compatability and also helps to laod pages faster
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is $ in JQuery? 
+Reference 1:http://stackoverflow.com/questions/8667736/what-does-the-sign-mean-in-jquery-or-javascript
+The $ is just a function. It is actually an alias for the function called jQuery
+
+Reference 2:http://www.w3schools.com/jquery/jquery_syntax.asp
+A $ sign to define/access jQuery
+
+Reference 3:http://api.jquery.com/jquery/
+ jQuery() — which can also be written as $() 
+
+Reference 4:https://digwp.com/2011/09/using-instead-of-jquery-in-wordpress/
+'jQuery' instead of '$' 
+
+
+Reference 5:https://www.smashingmagazine.com/2014/05/mystery-jquery-object-syntax-basic-introduction/
+
+$ looks like some special, complex JavaScript functionality. It’s not. The dollar symbol has no special significance in JavaScript. In fact, $ is just a function. It is an alternative name for the jQuery function.
+
+
+My ideas: $ is a synonym for jQuery() 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+$(document).ready vs window.onload?
+
+Reference 1:http://stackoverflow.com/questions/3698200/window-onload-vs-document-ready
+
+
+The ready event occurs after the HTML document has been loaded, while the onload event occurs later, when all content (e.g. images) also has been loaded.
+
+The onload event is a standard event in the DOM, while the ready event is specific to jQuery. The purpose of the ready event is that it should occur as early as possible after the document has loaded, so that code that adds functionality to the elements in the page doesn't have to wait for all content to load.
+
+
+Reference 2:http://stackoverflow.com/questions/4584373/difference-between-window-load-and-document-ready-functions
+
+document.ready is a jQuery event, it runs when the DOM is ready, e.g. all elements are there to be found/used, but not necessarily all content.
+    
+window.onload fires later (or at the same time in the worst/failing cases) when images and such are loaded, so if you're using image dimensions for example, you often want to use this instead.
+
+
+
+
+Reference 3:http://www.codeproject.com/Tips/632672/JavaScripts-document-ready-vs-window-load
+
+document.ready will execute right after the HTML document is loaded property, and the DOM is ready.
+
+The window.load however will wait for the page to be fully loaded, this includes inner frames, images etc. 
+
+
+Reference 4:https://discuss.codecademy.com/t/window-onload-vs-document-ready/19000/2
+
+Window.onload()
+
+window.onload (the load event) runs after everything has finished loading. Images, Flash, and some scripts, but usually not stylesheets. Use this for code that should run only when the page won't change any more. More descripton 
+
+$(document).ready()
+
+jQuery document.ready will run your code when the HTML is all ready, but before images and other resources have finished. This is the earliest possible time that you can change the DOM with JavaScript, so it's widely used. 
+
+
+Reference 5:http://javarevisited.blogspot.com/2014/11/difference-between-jquery-document-ready-vs-Javascript-window-onload-event.html
+
+In most cases jQuery document ready event fire before window.onload event, in worst case, where there is no bulky content to load and there is no delay from browser side, window onload event get trigger at same time as document.ready event.
+
+My ideas:
+$(document).ready is a jQuery event to be triggered after the HTML document has been loaded vs onload is a built-in DOM event to be triggered after all content has been loaded.
+
+
+
+
+
+

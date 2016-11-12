@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>The best employee of the month </p>
+
+<p id="indexcall"></p>
+
+<script>
+var myObject = {
+    firstName:"Hari Krishna",
+    lastName: "Kothagundla",
+    
+   	fullName: function() {
+        return this.firstName + " " + this.lastName +" and He is awesome";
+    }
+}
+document.getElementById("indexcall").innerHTML = myObject.fullName();
+</script>
+
+</body>
+</html>
+
+
+

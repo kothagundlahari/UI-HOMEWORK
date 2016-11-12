@@ -1,0 +1,36 @@
+<<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+	<title></title>
+</head>
+
+<body>
+<script type="text/javascript">
+
+var numbers = [1, 2, 3, 4];
+
+var max = Math.max.apply(null, numbers); 
+
+
+var min = Math.min.apply(null, numbers);
+
+
+max = -Infinity, min = +Infinity;
+
+for (var i = 0; i < numbers.length; i++) {
+  if (numbers[i] > max) {
+    max = numbers[i];
+  }
+  if (numbers[i] < min) {
+    min = numbers[i];
+  }
+}
+
+console.log(max);
+console.log(min);
+	
+
+</script>
+
+</body>

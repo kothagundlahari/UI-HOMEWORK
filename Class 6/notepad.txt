@@ -1,0 +1,109 @@
+java script call apply bind methods? how to use them? what are the use cases when we have to use them?
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Call method:
+
+Reference 1: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call
+
+The call() method calls a function with a given this value and arguments provided individually
+
+Syntax:  fun.call(thisArg[, arg1[, arg2[, ...]]])
+
+
+Reference 2: http://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
+
+call requires the parameters be listed explicitly.
+
+
+Reference 3: http://hangar.runway7.net/javascript/difference-call-apply
+In call the subsequent arguments are passed in to the function as they are
+
+Reference 4: https://codeplanet.io/javascript-apply-vs-call-vs-bind/
+
+Call invokes the function and allows you to pass in arguments one by one.
+
+Reference 5: http://adripofjavascript.com/blog/drips/invoking-javascript-functions-with-call-and-apply.html
+
+call gives us a way to "borrow" a method from one object to use for another.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Apply Method: 
+
+Reference 1: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply 
+The apply() method calls a function with a given this value and arguments provided as an array (or an array-like object).
+Syntax:
+fun.apply(thisArg, [argsArray])
+
+
+
+Reference 2: http://hangar.runway7.net/javascript/difference-call-apply
+Apply comes in - the second argument needs to be an array, which is unpacked into arguments that are passed to the called function.
+
+
+
+Reference 3:  http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/
+
+Apply function in particular allows us to execute a function with an array of parameters, such that each parameter is passed to the function individually when the function executes—great for variadic functions; a variadic function takes varying number of arguments, not a set number of arguments as most functions do.
+
+
+
+
+Reference 4: http://hangar.runway7.net/javascript/difference-call-apply
+ apply expects the second argument to be an array that it unpacks as arguments for the called function.
+
+
+Reference 5:  https://codeplanet.io/javascript-apply-vs-call-vs-bind/
+Apply invokes the function and allows you to pass in arguments as an array.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bind: 
+
+Reference 1: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
+
+The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+
+Syntax:
+
+fun.bind(thisArg[, arg1[, arg2[, ...]]])
+
+
+Reference 2: http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/
+
+ Bind () method primarily to call a function with the this value set explicitly. It other words, bind () allows us to easily set which specific object will be bound to this when a function or method is invoked.
+
+
+Reference 3:http://stackoverflow.com/questions/2236747/use-of-the-javascript-bind-method
+Bind creates a new function that will have this set to the first parameter passed to bind().
+
+
+
+Reference 4: https://www.smashingmagazine.com/2014/01/understanding-javascript-function-prototype-bind/
+
+.bind() simply creates a new function that, when called, has its this keyword set to the provided value. So, we pass our desired context, this (which is myObj), into the .bind() function. Then, when the callback function is executed, this references myObj
+
+
+Reference 5: http://lucybain.com/blog/2014/function-prototype-bind/
+
+bind allows you to set which object is treated as this within the function call.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+My analysis:
+
+Basically call and applly are used to call a function with this value object. But call accets the arguments individually and Apply have the capability to take arguments in array 
+
+
+Bind: The bind method creates a new function out of the function which it had called with this value and the new fuction can be reused 
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+selector.addEventListener(eventType, handlerFunction, captureFlag)
+Reference 1: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+The EventTarget.addEventListener() method registers the specified listener on the EventTarget it's called on. The event target may be an Element in a document, the Document itself, a Window, or any other object that supports events (such as XMLHttpRequest).
+Syntax: 
+target.addEventListener(type, listener[, options]);
+target.addEventListener(type, listener[, useCapture]);
+
+Reference 2: http://www.w3schools.com/jsref/met_element_addeventlistener.asp
+The addEventListener() method attaches an event handler to the specified element.
+syntax:
+element.addEventListener(event, function, useCapture) 
+
+Reference 3: http://idratherbewriting.com/events-and-listeners-javascript/
+many times you'll want to start functions when a user clicks a link, enters a form, scrolls, moves his or her mouse over an object, or does something else. These actions are called events. You can set specific functions to run when the user performs an event. These functions "listen" for an event and then initiate the function.
+
+Reference 4:
+
+
+Reference 5:
+
+
+
+2) what is event propagation?
+3) what is event bubbling  and capturing?
+4) event.stopPropagation?
+5) event.stopImmediatePropagation?
