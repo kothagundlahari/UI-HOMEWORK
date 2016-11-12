@@ -1,0 +1,76 @@
+selector.addEventListener(eventType, handlerFunction, captureFlag)
+Reference 1: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+The EventTarget.addEventListener() method registers the specified listener on the EventTarget it's called on. The event target may be an Element in a document, the Document itself, a Window, or any other object that supports events (such as XMLHttpRequest).
+Syntax: 
+target.addEventListener(type, listener[, options]);
+target.addEventListener(type, listener[, useCapture]);
+
+Reference 2: http://www.w3schools.com/jsref/met_element_addeventlistener.asp
+The addEventListener() method attaches an event handler to the specified element.
+syntax:
+element.addEventListener(event, function, useCapture) 
+
+Reference 3: http://idratherbewriting.com/events-and-listeners-javascript/
+many times you'll want to start functions when a user clicks a link, enters a form, scrolls, moves his or her mouse over an object, or does something else. These actions are called events. You can set specific functions to run when the user performs an event. These functions "listen" for an event and then initiate the function.
+
+Reference 4:
+
+
+Reference 5:
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2) what is event propagation?
+
+Reference1:http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
+Event bubbling and capturing are two ways of event propagation in the HTML DOM API, when an event occurs in an element inside another element, and both elements have registered a handle for that event. 
+Reference2:
+
+
+Reference3:
+Reference4:
+Reference5:
+My Ideas: 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+3) what is event bubbling  and capturing?
+Reference1:http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
+With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
+syntax:
+
+With capturing, the event is first captured by the outermost element and propagated to the inner elements.
+Reference2:
+Reference3:
+Reference4:
+Reference5:
+My Ideas: 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4) event.stopPropagation?
+Reference1:https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation 
+Prevents further propagation of the current event in the capturing and bubbling phases.
+syntax: event.stopPropagation();
+
+Reference2:https://api.jquery.com/event.stoppropagation/
+Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.
+
+Reference3:https://msdn.microsoft.com/en-us/library/ff975462(v=vs.85).aspx
+You can stop event propagation in the capturing or bubbling event phase by calling the stopPropagation method. However, the event dispatchs to all event listeners on the current target (regardless of capturing or bubbling) before the event flow stops
+
+Reference4:http://help.dottoro.com/ljgfjsxd.php
+When an event can bubble up, you can stop its propagation with the cancelBubble property and the stopPropagation method. Use the stopPropagation method in Firefox, Opera, Google Chrome and Safari, because the cancelBubble property is deprecated in those browsers
+
+Reference5:http://www.tutorialspoint.com/jquery/event-stoppropagation.htm
+The stopPropagation() method stops the bubbling of an event to parent elements, preventing any parent handlers from being notified of the event. 
+
+My Ideas: When we both the parent and the child events if we wish to stop the bubblig up the process we stop propagation
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5) event.stopImmediatePropagation?
+Reference1:
+Reference2:
+Reference3:
+Reference4:
+Reference5:
+My Ideas: 
