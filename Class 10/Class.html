@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>class demo</title>
+  <style>
+  div, span {
+    width: 120px;
+    height: 40px;
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    background-color: #EEEEEE;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<div class="class1">div class="notMe"</div>
+<div class="class1 class2">This div has class 1 and class 2</div>
+<span class="class1 class2">This is span which has class 1 and Class 2</span>
+ 
+<script>
+$( ".class1.class2" ).css( "border", "13px solid blue" );
+</script>
+ 
+</body>
+</html>

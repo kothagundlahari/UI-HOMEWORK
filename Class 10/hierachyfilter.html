@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>child demo</title>
+  <style>
+  body {
+    font-size: 14px;
+  }
+  	</style>
+  
+</head>
+<body>
+ 
+<ul class="topnav">
+  <li>Item 1</li>
+  <li>Item 2
+    <ul>
+    <li>This is first item in Second  UL</li>
+    <li>This is second item in second Ul</li>
+    <li>This is the thired item in Second UL</li>
+    </ul>
+  </li>
+  <li>Item 3</li>
+</ul>
+<form>
+  <label for="name">Name:</label>
+  <input name="name" id="name">
+  <fieldset>
+    <label for="newsletter">Newsletter:</label>
+    <input name="newsletter" id="newsletter">
+  </fieldset>
+</form>
+<input name="none">
+
+<div>div (doesn't match since before #prev)</div>
+<span id="prev">span#prev</span>
+<div>div 1</div>
+<div>div 2<div id="small">div3</div></div>
+<span>span sibling (not div)</span>
+<div>div 4</div>
+ 
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$( "ul.topnav > li" ).css( "border", "3px double blue" );
+$( "label + input" ).css( "color", "blue" ).val( "Labeled!" );
+$( "#prev ~ div" ).css( "border", "3px groove blue" );
+</script>
+ 
+</body>
+</html>

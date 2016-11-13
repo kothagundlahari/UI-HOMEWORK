@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>only-of-type demo</title>
+  <style>
+  div {
+    width: 100px;
+    height: 80px;
+    margin: 5px;
+    float: left;
+    background: #b9e;
+  }
+  p {
+    padding: 2px;
+    margin: 3px;
+    line-height: 1.4;
+    border: 1px solid #000;
+  }
+  </style>
+ 
+</head>
+<body>
+ 
+  <div>
+    <button>button1</button>
+    <button>button2</button>
+  </div>
+   
+  <div>
+    <button>onlybutton</button>
+  </div>
+  <div>
+    None
+  </div>
+   
+  <div>
+    <button>only button</button>
+    <p>p1</p>
+    <p>p2</p>
+  </div>
+   
+  
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+  $( "button:only-of-type" ).text( "Alone" ).css( "border", "2px blue solid" );
+</script>
+ 
+</body>
+</html>

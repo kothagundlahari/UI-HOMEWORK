@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>first-of-type demo</title>
+  <style>
+  span.anotherclass {
+    color: blue;
+    font-size: 120%;
+    font-style: italic;
+  }
+  </style>
+
+</head>
+  <body>
+   
+    <div>
+      <span>ravi</span>
+      <span>sam,</span>
+      <span>john,</span>
+      <span>Tad</span>
+    </div>
+    <div>
+      <b>Nobody,</b>
+      <span>Jorn,</span>
+      <span>Scott,</span>
+      <span>Timo</span>
+    </div>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+  $( "span:first-of-type" ).addClass( "anotherclass" );
+  </script>
+   
+  </body>
+</html>

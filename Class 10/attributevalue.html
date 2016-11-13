@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		  <meta charset="utf-8">
+		  <title>attributeContainsPrefix demo</title>
+		  <style>
+		  a {
+		    display: inline-block;
+		  }
+		  </style>
+		  
+	</head>
+		<body>
+		 
+		<a href="something.html" hreflang="en">This has lan is en </a>
+		<a href="something.html" hreflang="en-UK">This has lan is en-UK</a>
+		<a href="something.html" hreflang="english">This has lan is english</a>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script>
+		$( "a[hreflang|='en']" ).css( "border", "3px dotted pink" );
+		</script>
+		 
+		</body>
+</html>

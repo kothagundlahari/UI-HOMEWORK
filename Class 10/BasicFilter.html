@@ -1,0 +1,26 @@
+
+<!doctype html>
+<html >
+<head>
+  <meta charset="utf-8">
+  <title>all demo</title>
+  <style>
+  h3 {
+    margin: 0;
+  }
+  </style>
+</head>
+  <body>
+   
+  <div>This is div1</div>
+  <span>This is span 1</span>
+  <p>P <button>This is button 1</button></p>
+
+       <script   src="http://code.jquery.com/jquery-3.1.1.slim.min.js"   integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="   crossorigin="anonymous"></script>
+      <script>
+      var elementCount = $( "*" ).css( "border", "3px solid red" ).length;
+      $( "body" ).prepend( "<h3>" + elementCount + " elements found</h3>" );
+      </script>
+     
+  </body>
+</html>

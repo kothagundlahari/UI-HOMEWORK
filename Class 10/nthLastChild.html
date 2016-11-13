@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>nth-last-child demo</title>
+  <style>
+  div {
+    float: left;
+  }
+  span {
+    color: red;
+  }
+  </style>
+  
+</head>
+<body>
+ 
+<div>
+  <ul>
+    <li>John</li>
+    <li>Karl</li>
+    <li>Adam</li>
+  </ul>
+</div>
+<div>
+  <ul>
+    <li>Dan</li>
+  </ul>
+</div>
+<div>
+  <ul>
+    <li>Dave</li>
+    <li>Rick</li>
+    <li>Timmy</li>
+    <li>Gibson</li>
+  </ul>
+</div>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$( "ul li:nth-last-child(1)" ).append( "<span> - first to last!</span>" );
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <title>first-child demo</title>
+      <style>
+      p {
+        color: #008;
+      }
+      p.sored {
+        color: red;
+        font-weight: bolder;
+      }
+      </style>
+    
+  </head>
+  <body>
+   
+    <div>
+      <p>Hari </p>
+      <p>Krishna</p>
+      <p>Kothagundla</p>
+    </div>
+    <div>
+      <p>RAM</p>
+      <p>Prasad</p>
+      <p>Kothagundla</p>
+    </div>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+  $( "div p:first-child" )
+    .css( "text-decoration", "underline" )
+    .hover(function() {
+      $( this ).addClass( "sored" );
+    }, function() {
+      $( this ).removeClass( "sored" );
+    });
+  </script>
+   
+  </body>
+</html>

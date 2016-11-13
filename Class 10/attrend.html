@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>attributeEndsWith demo</title>
+
+</head>
+<body>
+ 
+<input inparam="This is ending with letter --newsletter">
+<input inparam="This doesnot end with letter --milkman">
+<input inparam="This ends with letter --jobletter">
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+<script>
+$( "input[inparam$='letter']" ).val( "a letter" );
+</script>
+ 
+</body>
+</html>

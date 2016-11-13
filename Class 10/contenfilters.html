@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>contains demo</title>
+  <style>
+  td {
+    text-align: center;
+  };
+   .test {
+    border: 3px inset red;
+  };
+  </style>
+  
+</head>
+	<body>
+	 
+	<div>hari Resig</div>
+	<div>Ghjfkakglk;</div>
+	<div>gjlakga;l'g</div>
+	<div>gjak;lg'akojioerhjkle;</div>
+
+    <table border="1">
+	    <tr><td>TD #0</td><td></td></tr>
+		<tr><td>TD #2</td><td></td></tr>
+		<tr><td></td><td>TD#5</td></tr>
+	</table>
+	<div><p>Hello in a paragraph</p></div>
+	<div>Hello again! (with no paragraph)</div>
+	 
+	
+			
+
+			    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+				<script>
+				$( "td:empty" )
+				  .text( "Was empty!" )
+				  .css( "background", "rgb(255,220,200)" );
+				
+					
+				$( "div:contains('hari')" ).css( "text-decoration", "underline" );
+			
+
+				$( "div:has(p)" ).addClass( "test" );
+
+				$( "td:parent" ).fadeTo( 1500, 0.3 );
+		         
+		        </script>
+	</body>
+</html>

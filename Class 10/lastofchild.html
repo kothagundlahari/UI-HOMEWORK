@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>last-child demo</title>
+  <style>
+  span.solast {
+    text-decoration: line-through;
+  }
+  </style>
+ 
+</head>
+  <body>
+   
+    <div>
+      <span>ram,</span>
+      <span>sal,</span>
+    
+    </div>
+    <div>
+      <span>first div</span>
+      <span>last div</span>
+     
+    </div>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+  <script>
+  $( "div span:last-child" )
+    .css({ color:"red", fontSize:"130%" })
+    .hover(function() {
+      $( this ).addClass( "solast" );
+    }, function() {
+      $( this ).removeClass( "solast" );
+    });
+  </script>
+   
+  </body>
+</html>

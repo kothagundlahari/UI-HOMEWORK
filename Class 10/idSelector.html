@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">x
+  <title>multiple demo</title>
+ 
+  <body>
+   
+  <span>span</span>
+  <p>p</p>
+  <p>p</p>
+  <div>div</div>
+  <span>span</span>
+  <p>p</p>
+  <div>div</div>
+  <b></b>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+  var list = $( "div, p, span" )
+    .map( function() {
+      return this.tagName;
+    })
+    .get()
+    .join( ", " );
+  $( "b" ).append( document.createTextNode( list ) );
+  </script>
+   
+  </body>
+</html>

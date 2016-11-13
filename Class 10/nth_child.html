@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>nth-child demo</title>
+    <style>
+    div {
+      float: left;
+    }
+    span {
+      color: red;
+    }
+    </style>
+    
+  </head>
+  <body>
+   
+    <div>
+      <ul>
+        <li>hari</li>
+        <li>Krishna </li>
+        <li>jgalgj</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li>Sam</li>
+        <li>iglkajkl</li>
+        <li>igjaklga;lk</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li>Glen</li>
+        <li>Tane</li>
+        <li>Ralph</li>
+        <li>David</li>
+      </ul>
+    </div>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+  $( "ul li:nth-child(3)" ).append( "<span> - 3rd!</span>" );
+  </script>
+   
+  </body>
+</html>

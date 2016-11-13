@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>nth-of-type demo</title>
+  <style>
+  .nth {
+    color: red;
+  }
+  </style>
+
+</head>
+<body>
+ 
+<div>
+  <span>ram</span>,
+  <b>Krishna</b>,
+  <span>kothagundla</span>,
+  <b>Rgajlkgkal;</b>,
+  <span>gjklajfl;ak</span>
+</div>
+<div>
+  <b>gkljag;lak</b>,
+  <span>jgla;k;'dafnajlk</span>
+  <span>kjlgaanlkjk;ldjnl</span>
+</div>
+<div>
+  <i><span>;kskljbkuuiojkdlv</span></i>,
+  <span>jklgad;l</span>,
+  <span>gjlkagakg</span>,
+  <span>lkgaaklkmnlkpkljnmlrisiodpfjhke0ioj0o</span>
+</div>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+<script>
+$( "span:nth-of-type(3)" )
+  .append( "<span> is 2nd sibling span</span>" )
+  .addClass( "nth" );
+</script>
+ 
+</body>
+</html>
