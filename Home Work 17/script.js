@@ -2,7 +2,7 @@ $(document).ready(function () {
   $('#get-data').click(function () {
     var showData = $('#show-data');
 
-    $.getJSON('example.json', function (data) {
+    $.getJSON('somedata1.json', function (data) {
       console.log(data);
 
       var items = data.items.map(function (item) {
