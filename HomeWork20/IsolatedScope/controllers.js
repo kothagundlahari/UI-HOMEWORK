@@ -19,3 +19,14 @@ app.directive('message',function(){
 	}
 
 });
+app.directive('message2',function(){
+	return{
+			templateUrl:'some.htm',
+			scope:{
+				x:'@m',
+				y:'@n',
+
+			},
+	}
+
+});
