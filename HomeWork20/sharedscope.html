@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body ng-app="Myapp">
+        <div id="div1" ng-controller="firstCtrl">
+            <p> The values of a and b in the scope of controller </p>
+                a= {{a}}<br>
+                b={{b}}<br>
+        <div firstDrtv> The values of a and b in directives are</div>
+        </div>
+           
+   
+
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script>
+        angular.module('Myapp',[])
+               .controller('firstCtrl', ['$scope', function($scope){
+                    $scope.a=10;
+                    $scope.b= 20;
+                }])
+                .directive('message', ['$scope', function($scope){
+                    
+                    return {
+
+                      templateUrl: 'some.htm',
+                        
+
+                    };
+                }]);
+           
+            
+        </script>
+        </body>
+    </html>
