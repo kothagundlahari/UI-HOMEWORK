@@ -16,7 +16,8 @@ app.directive('message',function(){
 				y:'@',
 
 			},
-	}
+			
+	};
 
 });
 app.directive('message2',function(){
@@ -27,6 +28,7 @@ app.directive('message2',function(){
 				y:'@n',
 
 			},
-	}
+		
+	};
 
 });
