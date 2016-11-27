@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div ng-app="myapp">
+        <div ng-controller="firstCtrl">
+            {{result}}
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script>
+    angular.module('myapp',[]);
+    angular.module('myapp').controller('firstCtrl',function firstCtrl($scope, $q, $timeout) {
+    
+    var getPromise = function(delay) {
+       
+        var deferred = $q.defer();
+                       
+        $timeout(function() {
+          
+            if(delay > 0) {
+                deferred.resolve("all the three promises are successsfullx");
+            } else {
+                deferred.reject("Fail");
+            }
+        }, delay);
+        
+       
+        return deferred.promise;
+    };
+    
+
+    $scope.result = "Waiting";
+    
+    
+    $q.all([
+            getPromise(5000),
+            getPromise(3000),
+            getPromise(8000) 
+        ]).then(function(value) {
+      
+        $scope.result = value;       
+    }, function(reason) {
+       
+        $scope.result = reason;
+    });
+})
+    </script>
+
+</body>
+
+</html>

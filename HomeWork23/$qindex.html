@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="firstCtrl">
+        <p>Result:{{result}}</p>
+        <p>Time:{{elapsedTime}}</p>
+        <p>Failure: {{failure}}</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+
+    <script>
+              angular.module('myApp', []);
+              angular.module('myApp').controller('firstCtrl', function ($q, $scope) {
+                function add (x, y) {
+                    var q = $q.defer();
+                    setTimeout(function () {
+                    var result = x + y;
+                    if (result >= 0) {
+                        q.resolve( result);
+                    }else {
+                        q.reject('negative value' + result);
+                    }
+                    }, 500);
+
+                    return q.promise;
+                }
+               })
+
+   
+
+    var startTime = Date.now();
+
+    add(5, 2)
+    .then(function (result) {
+        return add(result, 3);
+    })
+    .then(function (result) {
+        return add(result, -10);
+    })
+    .then(function (result) {
+        $scope.result = result;
+
+    })
+    .catch(function(failure){
+        $scope.failure =failure;
+    })
+    .finally(function(){
+            $scope.elapsedTime = Date.now()- startTime;
+    })
+
+        </script>
+</body>
+
+</html>

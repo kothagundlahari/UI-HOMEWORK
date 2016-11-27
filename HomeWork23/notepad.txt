@@ -1,0 +1,32 @@
+5) What is $q
+Reference 1: https://docs.angularjs.org/api/ng/service/$q
+A service that helps you run functions asynchronously, and use their return values (or exceptions) when they are done 
+processing.
+
+Reference 2: http://haroldrv.com/2015/02/understanding-angularjs-q-service-and-promises/
+Angular JS provides a service called $q which allows you to work with asynchronous functions and user their return values
+ when the execution has been completed, and what its really cool about it is that it will let you write your custom 
+ promises as well (so you can resolve or reject a promise when appropriate).
+
+Reference 3: http://www.ryansouthgate.com/2016/04/19/q-all-combining-promises-in-angularjs-2/
+$q.all() allows us to wait on an array (or object) of promises, $q.all() will combine these into a single promise.
+One Promise
+The returned promise abides by the following two rules:
+If one promise in the array fails, the combined promise fails
+If all promises succeed, the combined promise succeed
+
+Reference 4: https://stephenpitchford.com/angularjs-q/
+With $q.all(), we can pass in an array of deferred promises. This will make $q wait until all the promises have 
+resolved. Since we are passing in an array, we can conditionally push promises onto the array, if and only if we need 
+to wait for that promise to resolve. 
+
+Reference 5: https://mean-aakash.blogspot.com/2015/02/promise-apiq-explained-in-angularjs.html
+AngularJS comes with the $q (Pomise API) , which is lightweight . Many Angular services like $http, $timeout and others heavily rely on promise style APIs 
+(they return a promise, by default) , so it is a good idea to get familiar with $q in order to use those services effectively , and in order to manage your 
+numerous asynchronous events .
+
+My Ideas:
+$q is a function that can be used when you need to execute a group of asynchronous operation with out nesitng one 
+in another $q provides promises ( Resolve, Rejcect ) for handling the fuction
+Basically it is a simple alternative for the callback function.
+ 

@@ -1,0 +1,155 @@
+1) what is factory write and example
+Reference 1:https://stackoverflow.com/questions/16596569/angularjs-what-is-a-factory
+A factory is a function which returns any object
+
+Reference 2: http://www.learn-angular.org/#!/lessons/the-factory-recipe
+Values are great, but wouldn't it be nice if we could inject a function instead of a variable? This is the purpose of the factory recipe. Factories are 
+declared using the following syntax.
+
+Reference 3: https://tylermcginnis.com/angularjs-factory-vs-service-vs-provider-5f426cfe6b8c#.jiq85djm4
+You just create an object, add properties to it, then return that same object. Then when you pass the factory into your controller, those properties on 
+the object will now be available in that controller through your factory. A more extensive example is below.
+
+Reference 4: https://stackoverflow.com/questions/15666048/angularjs-service-vs-provider-vs-factory
+Syntax: module.factory( 'factoryName', function ); 
+Result: When declaring factoryName as an injectable argument you will be provided with the value that is returned by invoking the function reference passed
+ to module.factory.
+
+Reference 5: http://blog.manishchhabra.com/2013/09/angularjs-service-vs-factory-with-example/
+Syntax: module.factory('factoryName', function);
+
+Result: When declaring factoryName as an injectable argument you will be provided the value that is returned by invoking the function reference passed
+to module.factory.
+
+Usage: Could be useful for returning a ‘class’ function that can then be new’ed to create instances.
+
+My Ideas:
+
+Facories are function which create object  which can be used by the controllers 
+
+
+2) what is service write and example
+Reference 1: https://stackoverflow.com/questions/15666048/angularjs-service-vs-provider-vs-factory
+Syntax: module.service( 'serviceName', function ); 
+Result: When declaring serviceName as an injectable argument you will be provided with an instance of the function. In other words new 
+FunctionYouPassedToService().
+
+Reference 2:http://blog.manishchhabra.com/2013/09/angularjs-service-vs-factory-with-example/
+Syntax: module.service('serviceName', function);
+
+Result: When declaring serviceName as an injectable argument you will be provided with the instance of a function passed to module.service.
+
+Usage: Could be useful for sharing utility functions that are useful to invoke by simply appending () to the injected function reference. Could also be 
+run with injectedArg.call(this) or similar.
+
+Reference 3:https://toddmotto.com/factory-versus-service
+A Service is just a function for the business layer of the application, it’s just a simple function. It acts as a constructor function and is invoked once 
+at runtime with new, much like you would with plain JavaScript (Angular is just calling a new instance under the hood for us).
+
+Reference 4: https://www.tutorialspoint.com/angularjs/angularjs_services.htm
+Services are javascript functions and are responsible to do a specific tasks only. This makes them an individual entity which is maintainable and testable. 
+Controllers, filters can call them as on requirement basis. Services are normally injected using dependency injection mechanism of AngularJS.
+
+Reference 5: http://www.w3schools.com/angular/angular_services.asp
+In AngularJS, a service is a function, or object, that is available for, and limited to, your AngularJS application.
+
+My Ideas:
+Services are similar to factory but the difference is that the objects are created with reference which can be reused 
+
+
+
+3) what re diff between factory and service? are both of them singleton? what is singleton?
+Reference 1: http://www.codelord.net/2015/04/28/angularjs-whats-the-difference-between-factory-and-service/
+Most important is to realize that both are singletons in your app, even though the name “factory” might imply differently.
+Essentially, factories are functions that return the object, while services are constructor functions of the object which are instantiated with 
+the new keyword.
+
+Reference 2: https://www.quora.com/What-is-the-difference-between-a-factory-and-service-in-AngularJS
+Factory Provider
+Gives us the function's return value ie. You just create an object, add properties to it, then return that same object.When you pass this service 
+into your controller, those properties on the object will now be available in that controller through your factory. (Hypothetical Scenario)
+Can use other dependencies
+Usually used when the service instance requires complex creation logic
+Used for non configurable services
+If you're using an object, you could use the factory provider.
+Syntax: module.factory('factoryName', function);
+
+Service Provider
+Gives us the instance of a function (object)- You just instantiated with the ‘new’ keyword and you’ll add properties to ‘this’ and the service will 
+return ‘this’.When you pass the service into your controller, those properties on ‘this’ will now be available on that controller through your service.
+(Hypothetical Scenario)
+You can add properties and functions to a service object by using the this keyword
+Dependencies are injected as constructor arguments
+Used for simple creation logic
+If you're using a class you could use the service provider
+Syntax: module.service(‘serviceName’, function);
+
+Common features:
+Singleton and will only be created once
+Reusable component
+Used for communication between controllers to share data
+Cannot be injected in .config() function.
+
+Reference 3: https://groups.google.com/forum/#!topic/angular/56sdORWEoqg
+You use factory if the function you are providing will be called to build the object that you want.  I.E. Angular will do obj = MyFactory() to get the obj.
+You use service if the function you are providing is a constructor for the object that you want. I.E. Angular will do obj = new MyFactory() to instantiate 
+the obj.
+
+Reference 4: http://web-profile.net/angularjs/docs/angularjs-service-factory-provider/
+Services
+Syntax: module.service( 'serviceName', function );
+Result: When declaring serviceName as an injectable argument you will be provided with an instance of the function. In other words 
+new FunctionYouPassedToService().
+Factories
+Syntax: module.factory( 'factoryName', function ); Result: When declaring factoryName as an injectable argument you will be provided with the value that 
+is returned by invoking the function reference passed to module.factory.
+
+Reference 5: http://www.dotnetfunda.com/articles/show/3156/angularjs-service-vs-factory-vs-provider
+AngularJS Service
+Angular Service is used to for sharing utility functions with the service reference in the controller. Service is singleton in nature so for once 
+service only one instance is created in the browser and the same reference is used throughout the page.
+In the service, we create function names as property with this object.
+
+AngularJS Factory 
+The purpose of Factory is also same as Service however in this case we create a new object and add functions as properties of this object and at the end 
+we return this object.
+
+My Ideas: The difference between Factory and Service are used to return object but service will create an object which 
+can be reference. Both Factory and Service are singleton.
+
+Singleton -- only one object  
+
+
+4) how to make ajax calls using $http  and all methods of http like(get, post, put and delete)
+
+5) What is $q
+Reference 1: https://docs.angularjs.org/api/ng/service/$q
+A service that helps you run functions asynchronously, and use their return values (or exceptions) when they are done 
+processing.
+
+Reference 2: http://haroldrv.com/2015/02/understanding-angularjs-q-service-and-promises/
+Angular JS provides a service called $q which allows you to work with asynchronous functions and user their return values
+ when the execution has been completed, and what its really cool about it is that it will let you write your custom 
+ promises as well (so you can resolve or reject a promise when appropriate).
+
+Reference 3: http://www.ryansouthgate.com/2016/04/19/q-all-combining-promises-in-angularjs-2/
+$q.all() allows us to wait on an array (or object) of promises, $q.all() will combine these into a single promise.
+One Promise
+The returned promise abides by the following two rules:
+If one promise in the array fails, the combined promise fails
+If all promises succeed, the combined promise succeed
+
+Reference 4: https://stephenpitchford.com/angularjs-q/
+With $q.all(), we can pass in an array of deferred promises. This will make $q wait until all the promises have 
+resolved. Since we are passing in an array, we can conditionally push promises onto the array, if and only if we need 
+to wait for that promise to resolve. 
+
+Reference 5: https://mean-aakash.blogspot.com/2015/02/promise-apiq-explained-in-angularjs.html
+AngularJS comes with the $q (Pomise API) , which is lightweight . Many Angular services like $http, $timeout and others heavily rely on promise style APIs 
+(they return a promise, by default) , so it is a good idea to get familiar with $q in order to use those services effectively , and in order to manage your 
+numerous asynchronous events .
+
+My Ideas:
+$q is a function that can be used when you need to execute a group of asynchronous operation with out nesitng one 
+in another $q provides promises ( Resolve, Rejcect ) for handling the fuction
+Basically it is a simple alternative for the callback function.

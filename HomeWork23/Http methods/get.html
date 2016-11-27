@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<div ng-app="myApp">
+			<div ng-controller="FirstCtrl">
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Age</th>
+							<th>ID</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="item in ajaxData track by $index">
+							<td>{{item.name}}</td>
+							<td>{{item.age}}</td>
+							<td>{{item.id}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script>
+			angular.module('myApp', []);
+			angular.module('myApp').controller('FirstCtrl', ['$scope', '$http', function($scope, $http){
+				// used $http in order make ajax calls
+				$http({
+					// provided rest web service url
+					url : 'http://rest.learncode.academy/api/johnbob/friends/',
+					// we have provided the http methods 
+					method : 'GET'
+					// if its a success invoke the method below.
+				}).success(function(data) {
+					// create a new modle $scope.ajaxData and asigning a value response from ajax
+					$scope.ajaxData = data;
+					console.log('success : ',data);
+				}).error(function(xhr){
+					console.log('error : ', xhr);
+				})
+			}])
+		</script>
+	</body>
+</html>

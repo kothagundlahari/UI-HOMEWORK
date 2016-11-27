@@ -1,0 +1,43 @@
+<html>
+
+   <head>
+      <title>Angular JS Services</title>
+   </head>
+   
+   <body>
+      <h2>AngularJS Sample Application</h2>
+      
+      <div ng-app = "myApp" ng-controller = "firstCtrl">
+         <p>Enter a number: <input type = "number" ng-model = "number" /></p>
+         <button ng-click = "square()">X<sup>2</sup></button>
+         <p>Result: {{result}}</p>
+      </div>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+      <script>
+         var myApp = angular.module("myApp", []);
+         
+         myApp.factory('firstFact', function() {
+            var factory = {};
+            
+            factory.multiply = function(a, b) {
+               return a * b
+            }
+            return factory;
+         });
+         
+         myApp.service('ResutlServ', function(firstFact){
+            this.square = function(a) {
+               return firstFact.multiply(a,a);
+            }
+         });
+         
+         myApp.controller('firstCtrl', function($scope, ResutlServ) {
+            $scope.square = function() {
+               $scope.result = ResutlServ.square($scope.number);
+            }
+         });
+      </script>
+      
+   </body>
+</html>

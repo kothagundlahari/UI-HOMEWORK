@@ -1,0 +1,181 @@
+1) promise chaining
+Reference 1: https://docs.angularjs.org/api/ng/service/$q
+It is possible to create chains of any length and since a promise can be resolved with another promise (which will defer 
+its resolution further), it is possible to pause/defer resolution of the promises at any point in the chain. This makes it 
+possible to implement powerful APIs like $http's response interceptors.
+
+
+Reference 2: https://www.ibm.com/developerworks/community/blogs/3d274f0f-f47a-4bf0-91ec-8ebad479881b/entry/Get_rid_of_nested
+_promises_hell_do_promise_chains?lang=en
+There are cases when there is the need to perform a set of asynchronous operations, one after another, to load or process
+ something. In AngularJS, If the result of each operation is wrapped by a promise, taking advantage of promise chaining 
+ leads to code easier to be read and maintained
+
+Reference 3:http://www.syntaxsuccess.com/viewarticle/angular-promise-chaining-explained
+Generally, promise handling is simple in Angular – all you need is a success handler and an error handler. However, a great 
+feature of promises is the ability to chain handlers.  calls a service that returns a promise and “chains” on a then handler 
+to the original call.
+
+Reference 4: https://blog.explosionpills.com/angularjs-httppromise-methods-break-promise-chain/
+Promises typically implement two methods: .then and .catch.  .catch is syntactic sugar for .then(null, errorCallback) -- and
+ we all love sugar. Error callbacks are triggered even when exceptions are thrown which is just great.
+The main purpose of the Promise chain is to provide a single path of execution which assists in writing in flat code and simplifies error handling. You can even handle errors within the chain and continue to handle other promises and errors. Promise implementations also transparently handle other promises in the chain and you can treat these as values when reading the code.
+
+Reference 5: https://busypeoples.github.io/post/promises-in-angular-js/
+AngularJS makes use of promises in multiple parts of the framework, including $http, $routeProvider and $timeout. AngularJS has 
+its own promise library called $q, which is a minimalistic implementation of the Q library. Similar to jqLite which offers a 
+subset of the jQuery library. The only difference here is that the framework will use jQuery in case jQuery is loaded before
+ AngularJS, but will not use a different promise library if the promise library is loaded before AngularJS. $q is also tightly 
+ interwoven with $rootScope.Scope to resolve and reject promises in a more timely manner without having to redraw the browser.
+My Ideas:
+
+Promise chaning is used when events are interlinked(nested) then writing the code will be difficult so for this we use promise 
+chaining where we can use promises of one event for the other event to occur. Also by the use of promises the code looks simple and 
+will be easy to read.
+
+2) promise.all
+Reference 1: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
+Promise.all  that resolves when all of the promises in the given iterable have resolved, or rejects if any of the promises rejects. Promise.resolve. 
+
+If any of the passed in promises rejects, the all Promise immediately rejects with the value of the promise that rejected, 
+discarding all the other promises whether or not they have resolved. If an empty array is passed, then this method resolves
+immediately.
+
+
+Reference 2: https://msdn.microsoft.com/en-us/library/dn802824(v=vs.94).aspx
+Joins two or more promises and returns only when all the specified promises have completed or been rejected.
+
+Reference 3: https://stackoverflow.com/questions/31413749/node-js-promise-all-and-foreach
+Whenever you create multiple promises, .all them - that way it waits for all the promises and no errors from any of 
+them are silenced.
+
+Reference 4: https://dojotoolkit.org/reference-guide/1.10/dojo/promise/all.html
+promise/all is a function that takes multiple promises and returns a new promise that is fulfilled when all promises 
+have been resolved or one has been rejected.
+
+
+Reference 5: http://eddmann.com/posts/implementing-promise-all-and-promise-race-in-javascript/
+This function is used to compose multiple supplied promises into a single returned promise that provides the resulting values 
+in array form. Looking at the implementation documented below you can see how relativity easy it is to compose these promises 
+together, adding logic in-between resolutions to accumulate the final value returned.
+My Ideas: promise.all is used when multiple promises wither all need to be successfull for the promise to be success and failure 
+if any one of the promises fails 
+
+3) what is single page applications? how to write a program using, using ngRoute to develop 
+single page applications.
+Reference 1:https://scotch.io/tutorials/single-page-apps-with-angularjs-routing-and-templating
+single page app behavior are able to provide the feel of a phone/tablet application.
+Single page application
+No page refresh on page change
+Different data on each page
+Reference 2: https://tests4geeks.com/single-page-application-using-angularjs-tutorial/
+Single page application (SPA) is a web application that fits on a single page. All your code (JS, HTML, CSS) is retrieved
+ with a single page load. And navigation between pages performed without refreshing the whole page.
+Reference 3: https://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-
+with-aspnet-web-api-and-angularjs
+In Single-Page Applications (SPAs) the entire page is loaded in the browser after the initial request, but subsequent 
+interactions take place through Ajax requests. This means that the browser has to update only the portion of the page that
+ has changed; there is no need to reload the entire page. The SPA approach reduces the time taken by the application to 
+ respond to user actions, resulting in a more fluid experience.
+Reference 4: https://hello-angularjs.appspot.com/spa#/searchtable
+This page demonstrates how routing could help in creating single-page application in a very easy manner without writing 
+much of a code. Following are some of the key advantages of using routing functionality:
+Helps avoid writing duplicate header and footer code.
+Helps configure views and associated controller as part of module routing configuration at one place. Makes it easier to manage.
+Reference 5:http://www.awwwards.com/practical-uses-of-angularjs-create-a-single-page-application-spa-or-a-website-menu-in-an-instant.html
+There are a number of advantages to creating a single page website. Rather than separate pages needing to be fetched and 
+loaded during a visitor’s time on the site, a single page website can provide a much more fluid experience. This is because 
+all the code for the site is retrieved up-front or dynamically loaded as necessary to create an experience that feels more 
+like a desktop application than a traditional, multi-page website.
+My Ideas:
+Single page applications are application where the pages in that particular view need not wait to be refreshed entirely to fetch 
+the data but it displays data using ajax calls.
+
+4) ui.router to implement routing?
+Reference 1: https://github.com/angular-ui/ui-router
+
+Angular UI-Router is a client-side Single Page Application routing framework for AngularJS.
+
+Routing frameworks for SPAs update the browser's URL as the user navigates through the app. Conversely, this allows changes 
+to the browser's URL to drive navigation through the app, thus allowing the user to create a bookmark to a location deep within
+ the SPA.UI-Router applications are modeled as a hierarchical tree of states. UI-Router provides a state machine to manage 
+the transitions between those application states in a transaction-like manner.
+
+
+Reference 2: https://www.npmjs.com/package/angular-ui-router
+AngularUI Router is a routing framework for AngularJS, which allows you to organize the parts of your interface into a state
+machine. Unlike the $route service in the Angular ngRoute module, which is organized around URL routes, UI-Router is organized
+ around states, which may optionally have routes, as well as other behavior, attached.States are bound to named, nested and
+   parallel views, allowing you to powerfully manage your application's interface.
+
+Reference 3: http://www.funnyant.com/angularjs-ui-router/
+UI-Router supports multiple views and each can have it’s own corresponding Controller so that each of these regions can be 
+encapsulated and reused throughout the application if needed.
+
+Reference 4: http://joelhooks.com/blog/2013/07/22/the-basics-of-using-ui-router-with-angularjs/
+ui-router fully embraces the state-machine nature of a routing system. It allows you to define states, and transition your
+ application to those states. The real win is that it allows you to decouple nested states, and do some very complicated 
+ layouts in an elegant way.
+
+Reference 5: http://ngmodules.org/modules/ui-router
+AngularUI Router is a routing framework for AngularJS, which allows you to organize the parts of your interface into a state 
+machine. Unlike the $route service in Angular core, which is organized around URL routes, UI-Router is organized around states,
+ which may optionally have routes, as well as other behavior, attached.States are bound to named, nested and parallel views, 
+ allowing you to powerfully manage your application's interface.
+My Ideas: AngularUI Router is a framework which is build outside the angular js project to further enhance the routing properties 
+for this it uses states which may optionally have routes, as well as other behavior, attached to it. It is generally employed when 
+views are complex.
+
+
+5) diff ui.router and ngRoute?
+Reference 1: https://stackoverflow.com/questions/21023763/angularjs-difference-between-angular-route-and-angular-ui-router
+ui-router is a 3rd-party module and is very powerful. It supports everything the normal ngRoute can do as well as many extra
+ functions.Here are some common reason ui-router is chosen over ngRoute:
+
+ui-router allows for nested views and multiple named views. This is very useful with larger app where you may have pages that 
+inherit from other sections.ui-router allows for you to have strong-type linking between states based on state names. Change the 
+url in one place will update every link to that state when you build your links with ui-sref. Very useful for larger projects 
+where URLs might change.There is also the concept of the decorator which could be used to allow your routes to be dynamically 
+created based on the URL that is trying to be accessed. This could mean that you will not need to specify all of your routes 
+before hand.states allow you to map and access different information about different states and you can easily pass information
+ between states via $stateParams.You can easily determine if you are in a state or parent of a state to adjust UI element 
+ (highlighting the navigation of the current state) within your templates via $state provided by ui-router which you can expose
+  via setting it in $rootScope on run
+Reference 2: https://www.amasik.com/angularjs-ngroute-vs-ui-router/
+>  ngRoute is a angular core module which is good for basic scenarios. I believe that they will add more powerful features in upcoming releases.
+
+URL: https://docs.angularjs.org/api/ngRoute
+
+> Ui-router is a contributed module which is overcome the problems of ngRoute. Mainly Nested/Complex views.
+
+URL: https://github.com/angular-ui/ui-router
+
+Reference 3: https://curlybrackets.com/posts/43014/in-angular-what-is-the-difference-between-ngroute-and-ui-router
+The ui-router routing framework is a popular alternative to ngRoute. It was designed to enhance Angular's routing capabilities.
+The ui-router is particularly useful in large apps where you want the ability to create nested views. The interface is organized 
+into a state machine. When configuring the routing for your app, you are defining the various states your app supports, and 
+telling the app what to do and display when a specific state is encountered.
+
+The $route service in the Angular ngRoute module is organized around URL routes whereas the ui-router is organized around states,
+ which may optionally have routes, and other behavior attached. The ui-router takes a different approach than ngRoute in that 
+ it changes the views based on the app state and not just the URL routes.
+
+Reference 4: http://www.angularjs4u.com/routes/angularjs-routeprovider-stateprovider/
+* routeprovider is the default Angular router used with ngRoute
+* stateProvider is used by ui-router which provides a different implementation of routeprovider
+
+Reference 5: http://www.itgo.me/a/7799148935975128854/angular-ui-router-vs-ngroute-mini-test
+Angular UI Router allows you to save state when switching tabs, ngRoute does not
+They both use URLs to uniquely identify views
+They both associate a template and a controller with a view
+They both use the same service for route parameters
+My answers:
+True
+True
+False
+True
+My Ideas: 
+
+Ui router has all the capabilities of ng route Along with that for complex view many views can be in different section also 
+information can be passed between different states using state params.
+
