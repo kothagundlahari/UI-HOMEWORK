@@ -23,14 +23,14 @@ angular
   ])
 .config(function($stateProvider, $urlRouterProvider) {
     
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/main');
     
     $stateProvider
         
         // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
             url: '/home',
-            templateUrl: 'partial-home.html'
+            templateUrl: 'home.html'
         })
         
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
