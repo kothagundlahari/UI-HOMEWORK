@@ -11,13 +11,12 @@
 angular
   .module('uiRouterApp', [
     'ngAnimate',
-    'ngAria',
     'ngCookies',
-    'ngMessages',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui-router'
   ])
   .config(function ($routeProvider) {
     $routeProvider
