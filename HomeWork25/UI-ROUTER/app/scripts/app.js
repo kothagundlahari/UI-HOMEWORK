@@ -30,14 +30,14 @@ angular
         // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
             url: '/home',
-            templateUrl: 'home.html'
+            templateUrl: 'phome.html'
         })
         
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
         .state('about', {
             // we'll get to this in a bit   
             url: '/about'   
-            templateUrl: 'about.html' 
+            templateUrl: 'pabout.html' 
         });
         
 });
