@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name uiRouterApp.controller:MainCtrl
+ * @name finalApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the uiRouterApp
+ * Controller of the finalApp
  */
-angular.module('uiRouterApp')
+angular.module('finalApp')
   .controller('MainCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
