@@ -9,9 +9,5 @@
  */
 angular.module('finalApp')
   .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+   $scope.variable="This from the controller"
   });
