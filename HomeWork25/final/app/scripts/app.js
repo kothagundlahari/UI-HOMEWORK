@@ -24,13 +24,13 @@ angular
     
     $stateProvider
         
-        // HOME STATES AND NESTED VIEWS ========================================
+        // HOME STATES 
         .state('home', {
             url: '/',
             templateUrl: 'views/main.html'
         })
         
-        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
+        // ABOUT PAGE 
         .state('about', {
             url: '/about',
             templateUrl: 'views/about.html'
