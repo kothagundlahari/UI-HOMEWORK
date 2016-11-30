@@ -27,13 +27,16 @@ angular
         // HOME STATES 
         .state('home', {
             url: '/',
-            templateUrl: 'views/main.html'
+            templateUrl: 'views/main.html',
+            controller:'MainCtrl'
         })
         
         // ABOUT PAGE 
         .state('about', {
             url: '/about',
-            templateUrl: 'views/about.html'
+            templateUrl: 'views/about.html',
+            controller:'AboutCtrl'
+
         })
         
         
