@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+p:nth-last-child(2) {
+    background: red;
+} 
+p:nth-last-of-type(3) {
+    background: blue;
+}
+p:only-of-type {
+    background:lightpink;
+}
+a:visited {
+    color: pink;
+}
+:target {
+    border: 2px solid #D4D4D4;
+    background-color: #e5eecc;
+}
+</style>
+</head>
+<body>
+
+<p>The first paragraph.</p>
+<p>The second paragraph.</p>
+<p>The third paragraph.</p>
+<p>The fourth paragraph.</p>
+<div><p>This is a paragraph.</p></div>
+
+<a href="http://www.google.com">Google home page</a><br>
+<p><a href="#news1">Jump to New content 1</a></p>
+<br>
+<p id="news1"><b>New content 1...</b></p>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div[class^="test"] {
+    background: #ffff00;
+}
+div[class$="hari"] {
+    background: darkorchid;
+}
+p::after { 
+    content: " - this is the extension";
+
+}
+p::before {
+    content: "-this is the extension before -";
+}
+input:checked {
+    height: 50px;
+    width: 50px;
+}
+span:empty {
+    width: 100px;
+    height: 20px;
+    background: #ff0000;
+}
+input[type=text]:enabled {
+    background: #ffff00;
+}
+
+</style>
+</head>
+<body>
+<span></span>
+<div class="hari">The first div element.</div>
+<div class="first_test">class1.</div>
+<div class="second">class2</div>
+<div class="test">class3</div>
+<p class="test">class4</p>
+
+<form action="">
+     <input type="radio" checked="checked" value="male" name="gender"> Male<br>
+
+Name: <input type="text" disabled="disabled" value="Hari">
+First name: <input type="text" value="Mickey"><br>
+</form>
+<br>
+
+
+
+</body>
+</html>

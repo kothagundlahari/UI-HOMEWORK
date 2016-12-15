@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+div + p {
+    background-color: yellow;
+}
+p ~ ul {
+    background: #ff0000;
+}
+a[target] {
+    background-color: yellow;
+}
+[title~=flower] {
+    border: 5px solid blue;
+}
+[lang|=en] {
+    background: darkorange;
+}
+div[class^="test"] {
+    background: #ffff00;
+}
+</style>
+</head>
+
+<body>
+
+    <h1>THIS IS THE HEADER</h1>
+    <p lang="en">Hello!</p>
+    
+    <div>
+        <h2>HEADER2</h2>
+        <p>SOME SENDTENEES.</p>
+        
+    </div>
+    <p>The first paragraph.</p>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+    <a href="http://www.google.com" target="_blank">google.com</a>
+    <a href="http://www.yahoo.com" target="_top">yahoo.com</a>
+    <br>
+
+    <img src="klematis.jpeg" title="klematis flower" width="150" height="113">
+
+
+
+
+
+</body>
+
+</html>

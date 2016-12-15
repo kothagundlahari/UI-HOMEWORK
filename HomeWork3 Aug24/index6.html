@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+p:first-child {
+    background-color: yellow;
+}
+p::first-letter {
+    font-size: 200%;
+    color: #8A2BE2;
+}
+p:first-of-type {
+    background: red;
+}
+input:focus {
+    background-color: yellow;
+}
+a:hover {
+    background-color: deeppink;
+}
+input:in-range {
+    border: 2px solid yellow;
+}
+input:invalid {
+    border: 2px solid red;
+}
+ p:last-child {
+    background:blueviolet;
+}
+</style>
+</style>
+</head>
+
+<body>
+
+
+    <h1>This is the header</h1>
+    <p>some sentences</p>
+    <div>
+        <p>para1 </p>
+        <p>para 2</p>
+    </div>
+    <p>para1 </p>
+    <p>para 2</p>
+    <p>para3</p>
+    <p>para 4</p>
+
+    <form>
+First name: <input type="text" name="firstname"><br>
+Last name: <input type="text" name="lastname">
+</form>
+
+<a href="http://www.wikipedia.org">wikipedia.org</a>
+
+<br>
+
+<input type="number" min="15" max="100" value="57">
+
+<br>
+<input type="email" value="supportEmail">
+
+
+</body>
+
+</html>
