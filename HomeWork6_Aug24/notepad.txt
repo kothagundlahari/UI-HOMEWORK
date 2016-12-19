@@ -1,0 +1,79 @@
+1) What is bootstrap ? 
+Reference1: http://stackoverflow.com/questions/14546709/what-is-bootstrap
+"Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first 
+projects on the web."
+Reference2:http://www.w3schools.com/bootstrap/bootstrap_get_started.asp
+Bootstrap is a free front-end framework for faster and easier web development
+Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins
+Bootstrap also gives you the ability to easily create responsive designs.
+
+Reference3: http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-introduction.php
+Bootstrap is a powerful front-end framework for faster and easier web development. It includes HTML
+ and CSS based design templates for common user interface components like Typography, Forms, Buttons,
+Tables, Navigations, Dropdowns, Alerts, Modals, Tabs, Accordion, Carousel and many other as well as
+optional JavaScript extensions.
+
+Reference4: https://www.quora.com/What-is-Bootstrap
+Bootstrap is a commonly used CSS HTML and Javascript framework that enables rapid development of 
+responsive websites.
+
+Reference5: http://www.yogihosting.com/what-is-bootstrap/
+Bootstrap is the most popular, free and open-source framework for creating responsive layout in web
+pages with much less efforts. It contains HTML, CSS and JS components for creating forms, buttons,
+navigation, dropdown, modals, layout and many other things, the list is very long indeed.
+MyIdeas:
+BootstrapS iS a html, css, java script, css framework that can be used for desinging website easily and 
+with enhanced qualities also with greater responsiveness.
+
+2) what is grid system in bootstrap?
+Reference1: http://www.w3schools.com/bootstrap/bootstrap_grid_system.asp
+Bootstrap's grid system is responsive, and the columns will re-arrange depending on the screen size:
+On a big screen it might look better with the content organized in three columns, but on a small 
+screen it would be better if the content items were stacked on top of each other.
+Reference2: https://scotch.io/tutorials/understanding-the-bootstrap-3-grid-system
+The new Bootstrap grid system applies to mobile first. When you declare a specific grid size, that 
+is the grid for that size and above. This can be a little hard to grasp at first so here’s an example.
+For example, let’s say you want a site that has:
+1 column on extra small devices
+2 columns on small AND medium devices
+4 columns on large devices
+
+Reference3: https://www.sitepoint.com/understanding-bootstrap-grid-system/
+Like any grid system, the Bootstrap grid is a library of HTML/CSS components that allow you to 
+structure a website and place a website’s content in desired locations easily.
+
+Reference4: http://www.freedevelopertutorials.com/bootstrap-tutorial/grid-system/
+Layouting is done very often in websites. And it is not always easy to get exactly what you want. 
+That’s where Bootstraps grid system comes into play. It gives you simple to use tools (css-classes in
+fact), to make your life easyer! The Bootstrap gridsystem is probably the best of all available, as
+they took care about every possible situation you can face. Further it’s developed with mobile first in
+mind.
+
+Reference5: https://v4-alpha.getbootstrap.com/layout/grid/
+Bootstrap includes a powerful mobile-first grid system for building layouts of all shapes and sizes. 
+It’s based on a 12 column layout and has multiple tiers, one for each media query range. You can use 
+it with Sass mixins or our predefined classes.
+MyIdeas:
+for the mobile responsive web design bootstrap uses 12 grid system for which we can specify the type of 
+layout which we would like see for the particular design.
+
+3) for 1 row how many columns do we have in bootstrap?
+Reference1: http://stackoverflow.com/questions/19732763/bootstrap-3-nested-row-can-i-have-columns-add-up-to-more-then-12
+Yes, it's ok to have more that 12 columns in a row It will just make the extra columns wrap to the next line.
+Reference2: http://getbootstrap.com/2.3.2/scaffolding.html
+For a simple two column layout, create a .row and add the appropriate number of .span* columns. As this is a 12-column grid,
+each .span* spans a number of those 12 columns, and should always add up to 12 for each row (or the number of columns in the 
+parent).
+Reference3: http://getbootstrap.com/css/
+Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or 
+viewport size increases.
+
+Reference4: https://www.sitepoint.com/understanding-bootstrap-grid-system/
+Bootstrap allows you to create up to 12 columns and unlimited rows.
+
+Reference5: http://inspirationalpixels.com/tutorials/grid-system-with-sass
+There is a total of 12 columns and you can chain any columns together in a row
+MyIdeas:
+There are 12 columns in a rows in bootstrap grid system.
+
+
